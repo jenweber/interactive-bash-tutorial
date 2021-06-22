@@ -1,0 +1,48 @@
+@import 'normalize';
+
+body {
+    font-family: monospace;
+    color: whitesmoke;
+    background-color: #222;
+    font-size: 16px;
+    line-height: 2rem;
+    padding: 2rem 10%;
+}
+
+a {
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.terminal-instruction {
+  padding: 1rem;
+  border: 1px solid whitesmoke;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+input {
+  background-color: #222;
+  color: whitesmoke;
+  font-size: 1.5rem;
+  border: 2px solid whitesmoke;
+  padding: 5px;
+  min-width: 300px;
+}
+
+button {
+    background-color: #222;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    border: 2px solid whitesmoke;
+    padding: 5px;
+  }
+
+.command-input {
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.terminal-result, .terminal-entry {
+    font-size: 1.25rem;
+}

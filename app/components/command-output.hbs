@@ -1,0 +1,52 @@
+<h1>An interactive bash tutorial for your first day on the job</h1>
+<p>A project by <a href="https://jenweber.github.io/portfolio/" rel="noopener noreferrer" target="_blank">Jen Weber</a></p>
+
+<p>
+    Welcome to the interactive Mac OS bash tutorial designed to help you on you prepare for your first
+    day of employment as a web developer.
+    The onboarding instructions at your new job probably assume you know some
+    bash commands, so this will help you get off to a good start!
+    This tutorial will focus on the fundamentals that you will need to know in order
+    to navigate through your computer's file system and do some developer
+    environment setup.
+</p>
+
+<p>
+  Please note that this app is not a full Bash environment.
+  The only commands that will work are those that each step's instructions ask for.
+  I encourage you to try them all out on your own computer's terminal, if you want to see what happens when you make changes!
+  Nothing you are learning here is destructive. They are all safe to play around with!
+  Just don't delete or overwrite anything.
+</p>
+
+{{#each @outputHistory as |item| }}
+
+  {{#if (eq item.type "entry") }}
+    <p class="terminal-entry">
+      {{item.text}}
+    </p>
+  {{else if (eq item.type "instruction")}}
+    <div class="terminal-instruction">
+      <p>
+        {{item.introText}}
+      </p>
+      <p>
+        {{item.cta}}
+      </p>
+    </div>
+  {{else if (eq item.type "result")}}
+    <pre class="terminal-result">
+      {{item.text}}
+    </pre>
+  {{else if (eq item.type "incorrect")}}
+    <div class="terminal-instruction">
+      <p class="terminal-incorrect">
+        {{item.text}}
+      </p>
+      <p>
+        {{item.cta}}
+      </p>
+    </div>
+  {{/if}}
+{{/each}}
+
