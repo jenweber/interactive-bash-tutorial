@@ -12,7 +12,7 @@ const instructions = [
   For example, the author of this tutorial is Jen Weber, and her home directory
   on her computer is Users/jenweber.
   For this tutorial, we'll use "yourname" as a placeholder.`,
-    cta: `  To navigate to the home directory by command line, use the tilde symbol.
+    cta: `To navigate to the home directory by command line, use the tilde symbol.
     Go ahead and try it now! Type ~ and press Enter.
     `,
     answer: '~',
@@ -76,8 +76,8 @@ const instructions = [
   },
   {
     introText: `
-     Now that the project folder exists, let's navigate into it using cd.
-     cd stands for "change directory." It's the command line equivalent of
+     Now that the projects folder exists, let's navigate into it using cd.
+     cd stands for "change directory." cd is the command line equivalent of
      clicking on a file folder in a file browser.
     `,
     cta: `Type "cd projects" to enter the projects folder.`,
@@ -89,8 +89,6 @@ const instructions = [
     introText: `
      We are now inside the projects folder. We changed
      our working directory. How do we know?
-     The pwd command tells you where you are within the file system.
-     It stands for "print working directory."
     `,
     cta: `Earlier, you learned a command that stood for "print working directory." What is it?`,
     answer: `pwd`,
@@ -148,7 +146,7 @@ const instructions = [
     `,
     cta: `You already learned the command to list the files in a directory. What is it?`,
     answer: `ls`,
-    correctOutput: ``,
+    correctOutput: `notes`,
     type: 'instruction',
   },
   {
@@ -173,13 +171,13 @@ const instructions = [
   },
   {
     introText: `
-     So far, you make a projects directory and navigated inside of it, then
+     So far, you made a projects directory and navigated inside of it, then
      made a notes directory, and navigated one level deeper inside of it.
      How do you get back up to projects? The cd command is here to help again.
      Two dots means "go up one level." So to get from notes back to projects,
-     you can do ".."
+     you can do "cd .."
     `,
-    cta: `Type cd .. to go back up a level in the file system.`,
+    cta: `Type "cd .." to go back up a level in the file system.`,
     answer: `cd ..`,
     correctOutput: ``,
     type: 'instruction',
@@ -248,7 +246,7 @@ const instructions = [
     configuration from your .zshrc file. When we put the ~ in front of .zshrc,
     we are telling bash to look for this file in the home directory. That way, this
     command works from anywhere in the file system!`,
-    answer: `source ~/.zshrc`,
+    answer: 'source ~/.zshrc',
     correctOutput: ``,
     type: 'instruction',
   },
@@ -299,7 +297,7 @@ const instructions = [
   {
     introText: `
      Another thing you will do while setting up your dev computer is that
-     you will set some bash variables.
+     you will set some bash variables, aka environment variables.
      These variables can be used inside of other commands or even inside of
      other types of code, like JavaScript and Python.
      You will need to know how to create a variable,
@@ -307,8 +305,9 @@ const instructions = [
 
      Let's start by making a variable. Make sure you use single quotes around
      the text. Otherwise, bash will try to understand the text itself as a command.
+     Commonly, these variables are in all-caps. 
     `,
-    cta: `Type "REMINDER='Take chances, make mistakes, get messy!' to create a variable called REMINDER.`,
+    cta: `Type REMINDER='Take chances, make mistakes, get messy!' to create a variable called REMINDER.`,
     answer: `REMINDER='Take chances, make mistakes, get messy!'`,
     correctOutput: ``,
     type: 'instruction',
@@ -361,9 +360,12 @@ export default class TerminalComponent extends Component {
       this.outputHistory.push(instructions[this.progress + 1]);
       this.progress += 1;
     } else {
-      this.outputHistory.push({ text: "Please try again.", cta: currentStep.cta, type: "incorrect"})
+      this.outputHistory.push({
+        text: 'Please try again.',
+        cta: currentStep.cta,
+        type: 'incorrect',
+      });
     }
-
     this.outputHistory = this.outputHistory;
   }
 }
