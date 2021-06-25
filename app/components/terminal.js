@@ -13,7 +13,8 @@ const instructions = [
   on her computer is Users/jenweber.
   For this tutorial, we'll use "yourname" as a placeholder.`,
     cta: `To navigate to the home directory by command line, use the tilde symbol.
-    Go ahead and try it now! Type ~ and press Enter.
+    Go ahead and try it now! Type ~ into the form input and press Enter.
+    Then, the next set of instructions will appear above the input, so scroll down to see them.
     `,
     answer: '~',
     correctOutput: '',
@@ -332,7 +333,7 @@ const instructions = [
     introText: `
       That's it for our bash tutorial!
     `,
-    cta: `Good luck in your new job or project!`,
+    cta: `Good luck in your new job, class, or project!`,
     answer: ``,
     correctOutput: ``,
     type: 'instruction',
