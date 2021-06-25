@@ -2,7 +2,7 @@
 
 body {
     font-family: monospace;
-    color: whitesmoke;
+    color: rgb(230, 230, 230);
     background-color: #222;
     font-size: 16px;
     line-height: 2rem;
@@ -45,4 +45,8 @@ button {
 
 .terminal-result, .terminal-entry {
     font-size: 1.25rem;
+}
+
+main {
+  padding-bottom: 150px;
 }

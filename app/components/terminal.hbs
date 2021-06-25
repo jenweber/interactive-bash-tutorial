@@ -1,5 +1,7 @@
 <main>
     <Header />
     <CommandOutput @outputHistory={{this.outputHistory}} />
-    <CommandInput @onSubmit={{this.onSubmit}} />
+    {{#unless this.tutorialEnded}}
+        <CommandInput @onSubmit={{this.onSubmit}} />
+    {{/unless}}
 </main>

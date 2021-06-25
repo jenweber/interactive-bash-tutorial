@@ -334,7 +334,15 @@ const instructions = [
   },
   {
     introText: `
-      That's it for our bash tutorial!
+      That's it for our bash tutorial! Here are some final tips for you.
+
+      Ask lots of questions if you run into problems with your developer environment setup. It's normal.
+
+      Control-C will end a running process to install something, if it gets stuck or you make a mistake.
+
+      For most packages you install as part of developer environment setup, you can verify that they worked by using "--version" after the package name. For example, "git --version".
+
+      For a quick peek at what is inside of a file, use the less command, like "less example.txt". Press Q to quit less.
     `,
     cta: `Good luck in your new job, class, or project!`,
     answer: ``,
@@ -346,11 +354,13 @@ const instructions = [
 export default class TerminalComponent extends Component {
   @tracked outputHistory = [instructions[0]];
 
-  @tracked filepaths = {};
-
   @tracked progress = 0;
 
   tryAgain = { text: 'Please try again.' };
+
+  get tutorialEnded() {
+    return this.progress === instructions.length - 1;
+  }
 
   @action
   onSubmit(inputText) {
