@@ -134,7 +134,7 @@ const instructions = [
     introText: `
      Ok, so you have made a file within the projects directory. Cool!
      Let's also make another new directory while we are here.
-     You can call your new directory "notes."
+     You can call your new directory "notes".
     `,
     cta: `Do you remember how to make a new directory? Be sure to call it "notes" when you make it.`,
     answer: `mkdir notes`,
@@ -147,7 +147,10 @@ const instructions = [
     `,
     cta: `You already learned the command to list the files in a directory. What is it?`,
     answer: `ls`,
-    correctOutput: `notes`,
+    correctOutput: `
+      notes
+      example.txt
+    `,
     type: 'instruction',
   },
   {
